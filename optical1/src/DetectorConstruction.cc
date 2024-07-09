@@ -1,4 +1,5 @@
 #include "DetectorConstruction.hh"
+#include "OpticalMessenger.hh"
 
 #include "G4Material.hh"
 #include "G4Element.hh"
@@ -28,7 +29,6 @@
 
 DetectorConstruction::DetectorConstruction()
 : G4VUserDetectorConstruction(), 
-  fMessenger(0),
   fHodoscope1Logical(0),
   fWirePlane1Logical(0),
   fVisAttributes(),
@@ -37,6 +37,8 @@ DetectorConstruction::DetectorConstruction()
 {
     fArmRotation = new G4RotationMatrix();
     fArmRotation->rotateY(fArmAngle);
+
+    fMessenger = new OpticalMessenger(this);
 }
 
 //---

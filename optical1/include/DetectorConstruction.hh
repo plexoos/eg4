@@ -33,10 +33,16 @@
 
 #include "globals.hh"
 #include "G4VUserDetectorConstruction.hh"
+#include <CLHEP/Units/SystemOfUnits.h>
+
 #include "G4RotationMatrix.hh"
 #include "G4FieldManager.hh"
 
 #include <vector>
+
+
+// -mxp-
+class OpticalMessenger;
 
 class G4VPhysicalVolume;
 class G4Material;
@@ -67,7 +73,10 @@ public:
     
 private:
 
-    G4GenericMessenger* fMessenger;
+    // -mxp-
+    // G4GenericMessenger* fMessenger;
+
+    OpticalMessenger* fMessenger;
     
     G4LogicalVolume* fHodoscope1Logical;
     G4LogicalVolume* fWirePlane1Logical;
