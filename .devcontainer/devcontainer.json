@@ -1,5 +1,5 @@
 {
   "name": "eg4",
   "image": "ghcr.io/bnlnpps/esi-shell",
-  "postAttachCommand": "/opt/nvidia/nvidia_entrypoint.sh"
+  "postStartCommand": "/opt/nvidia/nvidia_entrypoint.sh"
 }
