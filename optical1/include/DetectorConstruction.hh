@@ -49,9 +49,8 @@ class G4Material;
 class G4VisAttributes;
 class G4GenericMessenger;
 
-/// Detector construction
-
-class DetectorConstruction : public G4VUserDetectorConstruction
+// ---
+class DetectorConstruction: public G4VUserDetectorConstruction
 {
 public:
     DetectorConstruction();
@@ -63,12 +62,10 @@ public:
     
     //Some components of geometry are thread pricate:
     //SensitiveDetectors and megnetic field.
-    //Build them here because this method is called by
-    //each thread
+    //Build them here because this method is called by each thread
     virtual void ConstructSDandField();
 
-    //This is just a convinience: a method where all materials needed
-    //are created
+    //This is just a convinience: a method where all materials needed are created
     void ConstructMaterials();
     
 private:
@@ -78,16 +75,10 @@ private:
 
     OpticalMessenger* fMessenger;
     
-    G4LogicalVolume* fHodoscope1Logical;
-    G4LogicalVolume* fWirePlane1Logical;
+    G4LogicalVolume* fdetectorLogical;
     
     std::vector<G4VisAttributes*> fVisAttributes;
-    
-    G4double fArmAngle;
-    G4RotationMatrix* fArmRotation;
-    G4VPhysicalVolume* fSecondArmPhys;
-};
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+};
 
 #endif
