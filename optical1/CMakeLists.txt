@@ -46,7 +46,7 @@ set(_SCRIPTS
   opt.out 
   icons.mac
   gui.mac
-#  run.png
+  run.png
   init.mac 
   init_vis.mac 
   run1.mac 
