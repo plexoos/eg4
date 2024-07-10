@@ -1,5 +1,4 @@
 {
   "name": "eg4",
-  "image": "ghcr.io/bnlnpps/esi-shell",
-  "overrideCommand": false
+  "image": "ghcr.io/bnlnpps/esi-shell"
 }
